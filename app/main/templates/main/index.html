@@ -1,0 +1,308 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Интернет-магазин женского нижнего белья — элегантность и комфорт каждый день">
+  <title>La Douceur — Магазин женского нижнего белья</title>
+  
+  <!-- Подключение Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Подключение стилей -->
+  <link rel="stylesheet" href="{% static "styles.css" %}">
+</head>
+<body>
+  <!-- ===== ШАПКА САЙТА ===== -->
+  <header class="header" id="header">
+    <div class="container">
+      <!-- Логотип -->
+      <a href="#home" class="logo">La Douceur</a>
+      
+      <!-- Кнопка бургер-меню (для мобильных) -->
+      <button class="burger" id="burger" aria-label="Открыть меню">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <!-- Основная навигация -->
+      <nav class="nav" id="nav">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link">Главная</a></li>
+          <li><a href="#catalog" class="nav-link">Каталог</a></li>
+          <li><a href="#contacts" class="nav-link">Контакты</a></li>
+          <li><a href="#delivery" class="nav-link">Доставка</a></li>
+        </ul>
+      </nav>
+      
+      <!-- Иконки действий -->
+      <div class="header-actions">
+        <!-- Поиск -->
+        <button class="icon-btn search-toggle" id="searchToggle" aria-label="Поиск">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.35-4.35"></path>
+          </svg>
+        </button>
+        
+        <!-- Избранное -->
+        <a href="#favorites" class="icon-btn" id="favoritesLink" aria-label="Избранное">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          </svg>
+          <span class="badge" id="favoritesBadge" style="display: none;">0</span>
+        </a>
+        
+        <!-- Корзина -->
+        <a href="#cart" class="icon-btn" id="cartLink" aria-label="Корзина">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="badge" id="cartBadge" style="display: none;">0</span>
+        </a>
+        
+        <!-- Профиль/Вход -->
+        <button class="icon-btn" id="userBtn" aria-label="Профиль">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </button>
+      </div>
+    </div>
+    
+    <!-- Поле поиска (скрыто по умолчанию) -->
+    <div class="search-bar" id="searchBar" style="display: none;">
+      <div class="container">
+        <input type="text" id="searchInput" placeholder="Поиск по каталогу..." aria-label="Поиск товаров">
+        <button class="close-search" id="closeSearch" aria-label="Закрыть поиск">&times;</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== ОСНОВНОЙ КОНТЕНТ ===== -->
+  <main id="app">
+    <!-- Секции будут подгружаться динамически через JavaScript -->
+  </main>
+
+  <!-- ===== ФУТЕР ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- О компании -->
+        <div class="footer-col">
+          <h3>О нас</h3>
+          <p>La Douceur — интернет-магазин женского нижнего белья, где каждая женщина найдёт для себя идеальное сочетание комфорта и элегантности.</p>
+        </div>
+        
+        <!-- Навигация -->
+        <div class="footer-col">
+          <h3>Навигация</h3>
+          <ul>
+            <li><a href="#home">Главная</a></li>
+            <li><a href="#catalog">Каталог</a></li>
+            <li><a href="#contacts">Контакты</a></li>
+            <li><a href="#delivery">Доставка</a></li>
+          </ul>
+        </div>
+        
+        <!-- Информация -->
+        <div class="footer-col">
+          <h3>Информация</h3>
+          <ul>
+            <li><a href="#privacy">Политика конфиденциальности</a></li>
+            <li><a href="#offer">Оферта</a></li>
+            <li><a href="#data-consent">Согласие на обработку данных</a></li>
+          </ul>
+        </div>
+        
+        <!-- Контакты -->
+        <div class="footer-col">
+          <h3>Контакты</h3>
+          <ul>
+            <li>Телефон: +7 (999) 123-45-67</li>
+            <li>Email: info@ladouceur.ru</li>
+            <li>Адрес: г. Москва, ул. Цветочная, д. 15</li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Копирайт -->
+      <div class="footer-bottom">
+        <p>&copy; 2026 La Douceur. Все права защищены.</p>
+        <!-- Ссылка на админку (скрытая) -->
+        <a href="#admin" class="admin-link" title="Панель администратора">Управление</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== МОДАЛЬНЫЕ ОКНА ===== -->
+  
+  <!-- Модальное окно: Вход/Регистрация -->
+  <div class="modal" id="authModal">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Закрыть">&times;</button>
+      
+      <!-- Вкладки: Вход / Регистрация -->
+      <div class="auth-tabs">
+        <button class="tab-btn active" data-tab="login">Вход</button>
+        <button class="tab-btn" data-tab="register">Регистрация</button>
+      </div>
+      
+      <!-- Форма входа -->
+      <form class="auth-form" id="loginForm">
+        <h2>Вход в аккаунт</h2>
+        <div class="form-group">
+          <label for="loginEmail">Email</label>
+          <input type="email" id="loginEmail" required placeholder="your@email.com">
+        </div>
+        <div class="form-group">
+          <label for="loginPassword">Пароль</label>
+          <input type="password" id="loginPassword" required placeholder="Введите пароль">
+        </div>
+        <button type="submit" class="btn btn-primary">Войти</button>
+        <p class="form-hint">Для входа в админку используйте: admin@example.com / admin123</p>
+      </form>
+      
+      <!-- Форма регистрации -->
+      <form class="auth-form hidden" id="registerForm">
+        <h2>Регистрация</h2>
+        <div class="form-group">
+          <label for="regEmail">Email</label>
+          <input type="email" id="regEmail" required placeholder="your@email.com">
+        </div>
+        <div class="form-group">
+          <label for="regName">Ваше имя</label>
+          <input type="text" id="regName" required placeholder="Как вас зовут?">
+        </div>
+        <div class="form-group">
+          <label for="regPassword">Пароль</label>
+          <input type="password" id="regPassword" required placeholder="Минимум 6 символов" minlength="6">
+        </div>
+        <div class="form-group">
+          <label for="regPasswordConfirm">Подтверждение пароля</label>
+          <input type="password" id="regPasswordConfirm" required placeholder="Повторите пароль">
+        </div>
+        <div class="form-group checkbox-group">
+          <input type="checkbox" id="regConsent" required>
+          <label for="regConsent">Я согласен(а) на <a href="#data-consent">обработку персональных данных</a></label>
+        </div>
+        <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Модальное окно: Карточка товара -->
+  <div class="modal" id="productModal">
+    <div class="modal-content modal-large">
+      <button class="modal-close" aria-label="Закрыть">&times;</button>
+      <div id="productModalContent">
+        <!-- Содержимое подгружается динамически -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Модальное окно: Оформление заказа -->
+  <div class="modal" id="checkoutModal">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Закрыть">&times;</button>
+      <form id="checkoutForm">
+        <h2>Оформление заказа</h2>
+        
+        <!-- Контактные данные -->
+        <div class="form-group">
+          <label for="checkoutName">Ваше имя</label>
+          <input type="text" id="checkoutName" required>
+        </div>
+        <div class="form-group">
+          <label for="checkoutEmail">Email</label>
+          <input type="email" id="checkoutEmail" required>
+        </div>
+        <div class="form-group">
+          <label for="checkoutPhone">Телефон</label>
+          <input type="tel" id="checkoutPhone" placeholder="+7 (___) ___-__-__">
+        </div>
+        <div class="form-group">
+          <label for="checkoutAddress">Адрес доставки</label>
+          <textarea id="checkoutAddress" rows="3" required placeholder="Город, улица, дом, квартира"></textarea>
+        </div>
+        
+        <!-- Способ доставки -->
+        <div class="form-group">
+          <label>Способ доставки</label>
+          <select id="checkoutDelivery">
+            <option value="courier">Курьерская доставка</option>
+            <option value="pickup">Самовывоз</option>
+            <option value="post">Почта России</option>
+          </select>
+        </div>
+        
+        <!-- Способ оплаты -->
+        <div class="form-group">
+          <label>Способ оплаты</label>
+          <select id="checkoutPayment">
+            <option value="card">Банковская карта</option>
+            <option value="cash">Наличные при получении</option>
+            <!-- ЗАГУШКА: Здесь будет подключение к платёжному шлюзу (ЮKassa, Stripe и т.п.) -->
+            <!-- В будущем: интеграция с Django и платёжными системами -->
+          </select>
+        </div>
+        
+        <!-- Комментарий -->
+        <div class="form-group">
+          <label for="checkoutComment">Комментарий к заказу</label>
+          <textarea id="checkoutComment" rows="2" placeholder="Дополнительные пожелания"></textarea>
+        </div>
+        
+        <!-- Итого -->
+        <div class="checkout-summary">
+          <p>Итого к оплате: <strong id="checkoutTotal">0 ₽</strong></p>
+        </div>
+        
+        <!-- ЗАГУШКА ОПЛАТЫ -->
+        <p class="payment-note">
+          <!-- Здесь будет подключение к платёжному шлюзу (ЮKassa, Stripe и т.п.) -->
+          После подтверждения заказа вы будете перенаправлены на страницу оплаты.
+        </p>
+        
+        <button type="submit" class="btn btn-primary btn-block">Подтвердить заказ</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Модальное окно: Успешное оформление заказа -->
+  <div class="modal" id="successModal">
+    <div class="modal-content modal-small">
+      <button class="modal-close" aria-label="Закрыть">&times;</button>
+      <div class="success-message">
+        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+          <polyline points="22 4 12 14.01 9 11.01"></polyline>
+        </svg>
+        <h2>Заказ оформлен!</h2>
+        <p>Спасибо за покупку! Мы свяжемся с вами в ближайшее время для подтверждения заказа.</p>
+        <p class="payment-note">Оплата будет доступна после подключения платёжного шлюза.</p>
+        <button class="btn btn-primary" onclick="window.location.hash='#home'">На главную</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== БАННЕР СОГЛАСИЯ НА ОБРАБОТКУ ДАННЫХ ===== -->
+  <div class="cookie-banner hidden" id="cookieBanner">
+    <div class="container">
+      <p>Мы используем файлы cookie для улучшения работы сайта. Продолжая пользоваться сайтом, вы соглашаетесь с нашей <a href="#privacy">политикой конфиденциальности</a> и <a href="#data-consent">согласием на обработку персональных данных</a>.</p>
+      <button class="btn btn-primary" id="acceptCookies">Принять</button>
+    </div>
+  </div>
+
+  <!-- Подключение JavaScript -->
+  <script src="{% static 'script.js' %}"></script>
+</body>
+</html>

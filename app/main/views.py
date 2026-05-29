@@ -6,11 +6,9 @@ from django.shortcuts import render
 def index(request):
     '''функция для отображения главной страницы'''
     context = {
-        'title' : 'Home',
-        'content' : 'Главная страница магазина - HOME',
-        'list' : ['first', 'second'],
-        'dict' : {'first' : 1},
-        'is_aut' : False
+        'title' : 'Home - главная страница',
+        'content' : 'La Douceur — Магазин женского нижнего белья',
+    
     }
     return render(request, 'main/index.html', context)
 
